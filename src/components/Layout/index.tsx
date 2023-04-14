@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren, ReactNode } from 'react';
 
 import Sidebar from '../Sidebar';
 import MenuBar from '../MenuBar';
@@ -7,7 +7,7 @@ import * as s from './styled';
 
 import GlobalStyles from '../../styles/global';
 
-const Layout: React.FC = ({ children }) => (
+const Layout: React.FC = ({ children }: PropsWithChildren<ReactNode>) => (
   <s.LayoutWrapper>
     <GlobalStyles />
     <MenuBar />

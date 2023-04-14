@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
+import { darken } from 'polished';
 
 import { Props } from '.';
 
@@ -15,13 +16,13 @@ export const SidebarWrapper = styled.aside`
   width: 400px;
 
   ${media.lessThan('large')`
-  bottom: 0;
-flex-direction: row;
-height: 200px;
-padding: 0;
-position: fixed;
-width: 100%;
-justify-content: space-evenly;
+    bottom: 0;
+    flex-direction: row;
+    height: 200px;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    justify-content: space-evenly;
   `}
 `;
 
@@ -59,6 +60,30 @@ export const InputBox = styled.div<Props>`
   padding: ${(props) => (props.isSmall ? '0 17px' : '0 24px')};
 `;
 
+export const InputContainer = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  min-width: 0px;
+  min-height: 0px;
+  height: 50px;
+  flex-direction: row;
+  margin: 40px 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(218, 218, 218);
+  border-image: initial;
+  border-radius: 24px;
+
+  &::placeholder {
+    color: #dadada;
+  }
+`;
+
 export const Input = styled.input`
   font-size: 24px;
   line-height: 24px;
@@ -83,10 +108,18 @@ export const Receipt = styled.ul`
   border-radius: 10px;
 `;
 
+export const Header = styled.li`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+`;
+
 export const Item = styled.li`
   display: flex;
-
   justify-content: space-between;
+  align-items: center;
+
   div {
     font-family: Roboto Mono;
     font-style: normal;
@@ -95,7 +128,71 @@ export const Item = styled.li`
     line-height: 14px;
     text-align: initial;
     display: flex;
-    margin-bottom: 20px;
     letter-spacing: -0.34px;
+  }
+`;
+
+export const ButtonGroup = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+
+  button {
+    border: 0;
+    border-radius: 4px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+    background: transparent;
+    padding: 4px;
+    &:hover {
+      color: ${darken(0.03, 'red')};
+    }
+  }
+
+  button:last-of-type {
+    padding-right: 0px;
+  }
+
+  span {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+  }
+`;
+
+export const Total = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: red;
+  margin-bottom: 24px;
+
+  div {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+  }
+`;
+
+export const Bill = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #758ca3;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+    }
   }
 `;

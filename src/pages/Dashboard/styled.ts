@@ -33,6 +33,7 @@ export const Info = styled.div`
 
   > .date {
     color: #292c48;
+    text-transform: capitalize;
   }
 `;
 
@@ -55,10 +56,9 @@ export const Search = styled.div`
   border-image: initial;
   border-radius: 24px;
 
-  &::placeholder{
-    color: #DADADA;
+  &::placeholder {
+    color: #dadada;
   }
-
 `;
 
 export const SearchInput = styled.input`
@@ -104,6 +104,11 @@ export const Card = styled.div`
       letter-spacing: -0.274286px;
       color: #8e99af;
     }
+    img {
+      width: 24px;
+      height: 24px;
+      object-fit: cover;
+    }
   }
   section {
     p {
@@ -124,92 +129,4 @@ export const Card = styled.div`
       line-height: 54px;
     }
   }
-`;
-
-export const CategoryContainer = styled.div`
-  position: relative;
-  height: 295px;
-  margin: auto 10px;
-  overflow: hidden;
-`;
-
-export const CategoryItem = styled.div`
-
-background: #ffffff;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  width: 100%;
-  margin: 25px auto;
-  max-width: 116px;
-  height: 144px;
-  padding: 18px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.3s;
-
-  header {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    p {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      margin-top: 10px;
-      line-height: 19px;
-      letter-spacing: -0.274286px;
-      color: #292c48;
-    }
-  }
-
-  &:hover {
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
-    transform: scale(1.2);
-  }
-
-
-
-  ${media.greaterThan('large')`
-  background: #ffffff;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  width: auto;
-  margin: 25px;
-  max-width: 100%;
-height: auto;
-  padding: 20px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.3s;
-
-  header {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    p {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      margin-top: 10px;
-      line-height: 19px;
-      letter-spacing: -0.274286px;
-      color: #292c48;
-    }
-  }
-
-  &:hover {
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
-    transform: scale(1.2);
-  }
-
-  `}
-
-
-
 `;

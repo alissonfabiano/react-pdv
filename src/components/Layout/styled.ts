@@ -9,3 +9,14 @@ export const LayoutMain = styled.main`
   flex: 1;
   padding: 100px 50px;
 `;
+
+export const Input = styled.input`
+  font-size: 24px;
+  line-height: 24px;
+  width: 100%;
+  color: rgb(68, 68, 68);
+  border: 0;
+  padding: 0 1rem;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+`;

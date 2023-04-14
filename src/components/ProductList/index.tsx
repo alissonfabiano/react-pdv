@@ -2,27 +2,29 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const ProductList = styled.ul`
-  margin-top: 25px;
+  margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   list-style: none;
 
   li {
     display: flex;
 
-    background: #fff;
+    background: #f1f4f6;
     border-radius: 4px;
     padding: 20px;
 
-
     img {
       align-self: center;
-      max-width: 64px;
+      width: 128px;
+      height: 128px;
       border: 1px solid #f0f2f5;
       box-sizing: border-box;
       border-radius: 32px;
       margin: 0 5px;
+      object-fit: cover;
+      border: 5px solid white;
     }
 
     > span {
@@ -30,13 +32,13 @@ export const ProductList = styled.ul`
       flex-direction: column;
       justify-content: space-evenly;
       flex: 1;
-    align-items: baseline;
+      align-items: baseline;
       > strong {
         font-family: Roboto;
         font-style: normal;
         font-weight: 300;
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 18px;
+        line-height: 20px;
         letter-spacing: -0.34px;
 
         color: #000000;
